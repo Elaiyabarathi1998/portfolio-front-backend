@@ -1,0 +1,244 @@
+
+body {
+
+    height: 100vh;
+
+    width: 100%;
+
+    background-color: rgb(71, 88, 102);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    margin: 0;
+
+    font-family: 'Orbitron', sans-serif;
+
+}
+
+ 
+
+.calculator-container {
+
+    height: 450px;
+
+    width: 350px;
+
+    background: linear-gradient(45deg, #3498db, #e74c3c);
+
+    border-radius: 15px;
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+
+    animation: gradientAnimation 5s linear infinite alternate; /* Add animation */
+
+  }
+
+ 
+
+  @keyframes gradientAnimation {
+
+    0% {
+
+      background-position: 0% 50%;
+
+    }
+
+    100% {
+
+      background-position: 100% 50%;
+
+      background: linear-gradient(
+
+        45deg,
+
+        rgb(
+
+          floor(random() * 256),
+
+          floor(random() * 256),
+
+          floor(random() * 256)
+
+        ),
+
+        rgb(
+
+          floor(random() * 256),
+
+          floor(random() * 256),
+
+          floor(random() * 256)
+
+        )
+
+      );
+
+    }
+
+  }
+
+ 
+
+ 
+
+.display {
+
+    height: 100px;
+
+    width: 300px;
+
+    background-color: rgb(126, 177, 221);
+
+    margin-top: 20px;
+
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+
+    border-radius: 15px;
+
+}
+
+ 
+
+.display input {
+
+    height: 70%;
+
+    width: 80%;
+
+    border: none;
+
+    outline: none;
+
+    font-size: 24px;
+
+    padding: 10px;
+
+    background-color: aliceblue;
+
+    margin: 10px;
+
+    margin-left: 20px;
+
+    border-radius: 10px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+ 
+
+.buttons {
+
+    height: auto;
+
+    width: 275px;
+
+    background-color: rgb(126, 177, 221);
+
+    margin-top: 20px;
+
+    margin-bottom: 20px;
+
+    padding: 20px 10px;
+
+    border-radius: 15px;
+
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+
+    display: grid;
+
+    text-align: center;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    grid-gap: 5px;
+
+}
+
+ 
+
+.buttons span {
+
+    padding: 10px;
+
+    background-color: rgb(71, 88, 102);
+
+    color: white;
+
+    border: none;
+
+    border-radius: 5px;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+
+}
+
+ 
+
+/*
+
+.buttons #btnClear {
+
+    grid-column: span 2;
+
+}
+
+ 
+
+.buttons #equals {
+
+    grid-column: span 4;
+
+} */
+
+ 
+
+.buttons span[id^='btnClear'] {
+
+    grid-column: span 2;
+
+}
+
+ 
+
+.buttons span[id^='equals'] {
+
+    grid-column: span 4;
+
+}
+
+ 
+
+ 
+
+.info {
+
+    font-family: monospace;
+
+    position: absolute;
+
+    line-height: 30px;
+
+    font-size: 14px;
+
+    left: 20px;
+
+    top: 20px;
+
+  }
